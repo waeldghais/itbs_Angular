@@ -1,0 +1,45 @@
+<!--
+<h1>Welcome to {{name}}</h1>
+
+
+
+
+
+<ul>
+  <li *ngFor="let user of users" class="my-2">
+    {{user}} <button (click)="deleteUser(user)" class="btn btn-sm btn-danger">delete</button>
+  </li>
+</ul>
+
+
+<h2>My Product</h2>
+<p>Name : {{product.name}}</p>
+<p>Price : {{product.price}}</p>
+<p>Brand : {{product.brand}}</p>
+<p>Category name : {{product.category.name}}</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Brand</th>
+      <th>Category Name</th>
+      <th>#</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>{{p.name}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.brand}}</td>
+      <td>{{p.category.name}}</td>
+      <td>
+        <button class="btn btn-sm btn-danger mr-2">delete</button>
+        <button class="btn btn-sm btn-warning">edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+-->
+<router-outlet></router-outlet>

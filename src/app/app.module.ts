@@ -3,35 +3,40 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './component/home/home.component';
-import { LoginComponent } from './component/login/login.component';
-import { RegisterComponent } from './component/register/register.component';
-import { DashbordComponent } from './component/dashbord/dashbord.component';
-import { Page404Component } from './component/page404/page404.component';
-import { SidebarreComponent } from './component/sidebarre/sidebarre.component';
-import { TopbarreComponent } from './component/topbarre/topbarre.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';
+import { Page404Component } from './components/page404/page404.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CatComponent } from './cat/cat.component';
-import { FormCatComponent } from './form-cat/form-cat.component';
+
+import { HttpClientModule } from "@angular/common/http";
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import { CategoryAddComponent } from './components/category-add/category-add.component';
+import { ProduitComponent } from './components/produit/produit.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
     RegisterComponent,
-    DashbordComponent,
+    DashboardComponent,
+    HomeComponent,
     Page404Component,
-    SidebarreComponent,
-    TopbarreComponent,
-    CatComponent,
-    FormCatComponent
+    SidebarComponent,
+    TopbarComponent,
+    CategoryListComponent,
+    CategoryAddComponent,
+    ProduitComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

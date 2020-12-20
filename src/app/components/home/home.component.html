@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink=''>Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink='/dashbord'>Dashbord</a>
+        </li>
+     
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="nav-link" routerLink='/register'><button class="btn btn-secondary my-2 my-sm-0" type="submit">Register</button></a>
+        <a class="nav-link" routerLink='/login'><button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button></a>
+      </form>
+    </div>
+  </nav>
+  <table><tr><td>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action active">Catégorie</a>
+        <a href="#" class="list-group-item list-group-item-action" *ngFor="let category of catListe">{{category.name}}</a>
+        
+      </div>
+  </td>
+<td>
+    <!--<div class="card mb-3" *ngFor="let pro of prodListe">
+        <h3 class="card-header">vettement</h3>
+        
+            <img  src="assets/img/"+{{pro.image}} width="100px">
+       
+        
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{pro.name}}</li>
+          <li class="list-group-item">{{pro.prix}}</li>
+          
+        </ul>
+        
+     
+     
+      </div>-->
+</td>
+</tr></table>

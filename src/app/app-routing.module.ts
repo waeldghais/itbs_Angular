@@ -1,41 +1,55 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CatComponent } from './cat/cat.component';
-import { DashbordComponent } from './component/dashbord/dashbord.component';
-import { HomeComponent } from './component/home/home.component';
-import { LoginComponent } from './component/login/login.component';
-import { Page404Component } from './component/page404/page404.component';
-import { RegisterComponent } from './component/register/register.component';
-import { FormCatComponent } from './form-cat/form-cat.component';
+import { CategoryAddComponent } from './components/category-add/category-add.component';
+import { CategoryListComponent } from './components/category-list/category-list.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { Page404Component } from './components/page404/page404.component';
+import { ProduitComponent } from './components/produit/produit.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AuthGuard } from './guards/auth.guard';
+
+
 const routes: Routes = [
   {
-    path:"",
-    component:HomeComponent
+    path: "",
+    component: HomeComponent
   },
   {
-    path:"login",
-    component:LoginComponent
+    path: "login",
+    component: LoginComponent
   },
   {
-    path:"register",
-    component:RegisterComponent
+    path: "register",
+    component: RegisterComponent
   },
   {
-    path:"dashbord",
-    component:DashbordComponent
+    path: "dashbord",
+    component: DashboardComponent,
+    canActivate:[AuthGuard]
+  },
+
+  {
+    path: "category-list",
+    component: CategoryListComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:"Cat",
-    component:CatComponent
+    path: "category-add",
+    component: CategoryAddComponent,
+    canActivate:[AuthGuard]
   },
   {
-    path:"FormCat",
-    component:FormCatComponent
+    path:"produit",
+    component:ProduitComponent,
+    canActivate:[AuthGuard]
   },
+
   //404
   {
-    path:"**",
-    component:Page404Component
+    path: "**",
+    component: Page404Component
   }
 ];
 
